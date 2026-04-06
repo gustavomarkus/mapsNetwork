@@ -2,33 +2,6 @@
 include 'config.php';
 header('Content-Type: application/json');
 
-/*
-function check_http($url) {
-
-    $ch = curl_init();
-
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // no imprime resultado
-    curl_setopt($ch, CURLOPT_TIMEOUT, 5);            // timeout total
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);     // timeout conexión
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);  // seguir redirecciones
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // evitar problemas SSL
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($ch, CURLOPT_NOBODY, true);          // solo headers (más rápido)
-
-    curl_exec($ch);
-
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $time     = curl_getinfo($ch, CURLINFO_TOTAL_TIME);
-
-    curl_close($ch);
-
-    return [
-        'code' => $httpCode,
-        'time' => $time
-    ];
-}
-*/
 function check_http($url) {
 
     $ch = curl_init();
@@ -92,28 +65,6 @@ foreach ($nodos as $n) {
         continue;
     }
 
-	/*
-   // =========================
-    // 🌐 HTTP (AFIP)
-    // =========================
-    if ($type === 'http') {
-
-        $httpCode = check_http($ip);
-
-        // AFIP puede devolver 403/500 pero estar vivo
-        $is_online = ($httpCode > 0);
-
-        $resultados[] = [
-            'id'        => $n['id'],
-            'online'    => $is_online,
-            'no_ip'     => false,
-            'color'     => ($is_online ? '#00FF00' : '#FF0000'),
-            'http_code' => $httpCode
-        ];
-
-        continue;
-    }
-	*/
 	// =========================
 	// 🌐 HTTP (AFIP)
 	// =========================
