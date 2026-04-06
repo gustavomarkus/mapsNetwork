@@ -1,0 +1,5 @@
+Internet,IP_GATEWAY,0,,cloud_a.png,Gateway Claro
+SDWanClaro,IP_SDWAN,1,Internet,sdwan.png
+Firewall,IP_FIREWALL,1,Internet,firewall.png
+CentralVoIP,IP_VOIP,2,Firewall,voip.png
+WSFEv1,https://servicios1.afip.gob.ar/wsfev1/service.asmx?WSDL,2,Firewall,afip.png,ServiciosAfip,http
