@@ -81,7 +81,6 @@
     
 
 	<div class="container">
-		<iframe src="index_externos.php" class="panel-externos"></iframe>
 		<div id="network-map"></div>
 	</div>
 
